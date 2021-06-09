@@ -34,3 +34,18 @@ def test_filter():
     assert_df_equality(result_df, exp_input_df)
 
 
+def test_rename():
+    """Test for Renaming dataframe.
+
+    Checks the function of col_rename by comparing with test Dataframe.
+
+    """
+
+    df = spark.createDataFrame(
+        [("", "", "", "")], ["id", "email", "btc_a", "cc_t"])
+    df_con_rename = col_rename(COL_DICT, df)
+    assert df_con_rename.columns == [
+        "client_identifier",
+        "email",
+        "bitcoin_address",
+        "credit_card_type"]
