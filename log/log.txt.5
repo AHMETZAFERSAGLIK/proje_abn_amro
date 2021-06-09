@@ -1,0 +1,68 @@
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[23] at toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:76) (first 15 tasks are for partitions Vector(0))
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 2.0 with 1 tasks resource profile 0
+INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 2.0 (TID 2) (192.168.2.48, executor driver, partition 0, PROCESS_LOCAL, 4886 bytes) taskResourceAssignments Map()
+INFO Executor task launch worker for task 0.0 in stage 2.0 (TID 2) org.apache.spark.executor.Executor - Running task 0.0 in stage 2.0 (TID 2)
+INFO Executor task launch worker for task 0.0 in stage 2.0 (TID 2) org.apache.spark.sql.execution.datasources.FileScanRDD - Reading File path: file:///C:/Users/zafer/Desktop/abn_amro/proje/dataset_one.csv, range: 0-52041, partition values: [empty row]
+INFO Executor task launch worker for task 0.0 in stage 2.0 (TID 2) org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator - Code generated in 27.0859 ms
+INFO Executor task launch worker for task 0.0 in stage 2.0 (TID 2) org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator - Code generated in 18.6616 ms
+INFO Executor task launch worker for task 0.0 in stage 2.0 (TID 2) org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator - Code generated in 22.3232 ms
+INFO Executor task launch worker for task 0.0 in stage 2.0 (TID 2) org.apache.spark.executor.Executor - Finished task 0.0 in stage 2.0 (TID 2). 4743 bytes result sent to driver
+INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 2.0 (TID 2) in 266 ms on 192.168.2.48 (executor driver) (1/1)
+INFO task-result-getter-2 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 2.0, whose tasks have all completed, from pool 
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 2 (toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:76) finished in 0,293 s
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Killing all running tasks in stage 2: Stage finished
+INFO broadcast-exchange-0 org.apache.spark.scheduler.DAGScheduler - Job 2 finished: toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:76, took 0,301263 s
+INFO broadcast-exchange-0 org.apache.spark.storage.memory.MemoryStore - Block broadcast_8 stored as values in memory (estimated size 4.0 MiB, free 360.6 MiB)
+INFO broadcast-exchange-0 org.apache.spark.storage.memory.MemoryStore - Block broadcast_8_piece0 stored as bytes in memory (estimated size 4.2 KiB, free 360.6 MiB)
+INFO dispatcher-BlockManagerMaster org.apache.spark.storage.BlockManagerInfo - Added broadcast_8_piece0 in memory on 192.168.2.48:58057 (size: 4.2 KiB, free: 366.1 MiB)
+INFO broadcast-exchange-0 org.apache.spark.SparkContext - Created broadcast 8 from toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:76
+INFO Thread-4 org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator - Code generated in 37.6666 ms
+INFO Thread-4 org.apache.spark.storage.memory.MemoryStore - Block broadcast_9 stored as values in memory (estimated size 303.1 KiB, free 360.3 MiB)
+INFO Thread-4 org.apache.spark.storage.memory.MemoryStore - Block broadcast_9_piece0 stored as bytes in memory (estimated size 27.4 KiB, free 360.3 MiB)
+INFO dispatcher-BlockManagerMaster org.apache.spark.storage.BlockManagerInfo - Added broadcast_9_piece0 in memory on 192.168.2.48:58057 (size: 27.4 KiB, free: 366.1 MiB)
+INFO Thread-4 org.apache.spark.SparkContext - Created broadcast 9 from toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:76
+INFO Thread-4 org.apache.spark.sql.execution.FileSourceScanExec - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+INFO Thread-4 org.apache.spark.SparkContext - Starting job: toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:76
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 3 (toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:76) with 1 output partitions
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 3 (toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:76)
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 3 (MapPartitionsRDD[27] at toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:76), which has no missing parents
+INFO dag-scheduler-event-loop org.apache.spark.storage.memory.MemoryStore - Block broadcast_10 stored as values in memory (estimated size 15.0 KiB, free 360.3 MiB)
+INFO dag-scheduler-event-loop org.apache.spark.storage.memory.MemoryStore - Block broadcast_10_piece0 stored as bytes in memory (estimated size 7.2 KiB, free 360.3 MiB)
+INFO dispatcher-BlockManagerMaster org.apache.spark.storage.BlockManagerInfo - Added broadcast_10_piece0 in memory on 192.168.2.48:58057 (size: 7.2 KiB, free: 366.1 MiB)
+INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 10 from broadcast at DAGScheduler.scala:1388
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[27] at toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:76) (first 15 tasks are for partitions Vector(0))
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 3.0 with 1 tasks resource profile 0
+INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 3.0 (TID 3) (192.168.2.48, executor driver, partition 0, PROCESS_LOCAL, 4886 bytes) taskResourceAssignments Map()
+INFO Executor task launch worker for task 0.0 in stage 3.0 (TID 3) org.apache.spark.executor.Executor - Running task 0.0 in stage 3.0 (TID 3)
+INFO Executor task launch worker for task 0.0 in stage 3.0 (TID 3) org.apache.spark.sql.execution.datasources.FileScanRDD - Reading File path: file:///C:/Users/zafer/Desktop/abn_amro/proje/dataset_two.csv, range: 0-64985, partition values: [empty row]
+INFO Executor task launch worker for task 0.0 in stage 3.0 (TID 3) org.apache.spark.executor.Executor - Finished task 0.0 in stage 3.0 (TID 3). 9721 bytes result sent to driver
+INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 3.0 (TID 3) in 108 ms on 192.168.2.48 (executor driver) (1/1)
+INFO task-result-getter-3 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 3.0, whose tasks have all completed, from pool 
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 3 (toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:76) finished in 0,138 s
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Killing all running tasks in stage 3: Stage finished
+INFO Thread-4 org.apache.spark.scheduler.DAGScheduler - Job 3 finished: toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:76, took 0,168940 s
+INFO dispatcher-BlockManagerMaster org.apache.spark.storage.BlockManagerInfo - Removed broadcast_4_piece0 on 192.168.2.48:58057 in memory (size: 5.4 KiB, free: 366.1 MiB)
+INFO dispatcher-BlockManagerMaster org.apache.spark.storage.BlockManagerInfo - Removed broadcast_7_piece0 on 192.168.2.48:58057 in memory (size: 7.0 KiB, free: 366.1 MiB)
+INFO dispatcher-BlockManagerMaster org.apache.spark.storage.BlockManagerInfo - Removed broadcast_5_piece0 on 192.168.2.48:58057 in memory (size: 27.6 KiB, free: 366.1 MiB)
+INFO dispatcher-BlockManagerMaster org.apache.spark.storage.BlockManagerInfo - Removed broadcast_3_piece0 on 192.168.2.48:58057 in memory (size: 27.6 KiB, free: 366.2 MiB)
+INFO main org.apache.spark.ui.SparkUI - Stopped Spark web UI at http://192.168.2.48:4040
+INFO dispatcher-event-loop-0 org.apache.spark.MapOutputTrackerMasterEndpoint - MapOutputTrackerMasterEndpoint stopped!
+INFO main org.apache.spark.storage.memory.MemoryStore - MemoryStore cleared
+INFO main org.apache.spark.storage.BlockManager - BlockManager stopped
+INFO main org.apache.spark.storage.BlockManagerMaster - BlockManagerMaster stopped
+INFO dispatcher-event-loop-0 org.apache.spark.scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint - OutputCommitCoordinator stopped!
+INFO main org.apache.spark.SparkContext - Successfully stopped SparkContext
+INFO shutdown-hook-0 org.apache.spark.util.ShutdownHookManager - Shutdown hook called
+INFO shutdown-hook-0 org.apache.spark.util.ShutdownHookManager - Deleting directory C:\Users\zafer\AppData\Local\Temp\spark-b09cdb76-f7d8-4aec-80a9-1d51558933da
+INFO shutdown-hook-0 org.apache.spark.util.ShutdownHookManager - Deleting directory C:\Users\zafer\AppData\Local\Temp\spark-0d58c12e-c261-44c6-b774-2c69596fb198\pyspark-5b26d933-e82d-4e33-b110-0f3d2f19932e
+INFO shutdown-hook-0 org.apache.spark.util.ShutdownHookManager - Deleting directory C:\Users\zafer\AppData\Local\Temp\spark-0d58c12e-c261-44c6-b774-2c69596fb198
+WARN main org.apache.hadoop.util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+INFO main org.apache.spark.SecurityManager - Changing view acls to: zafer
+INFO main org.apache.spark.SecurityManager - Changing modify acls to: zafer
+INFO main org.apache.spark.SecurityManager - Changing view acls groups to: 
+INFO main org.apache.spark.SecurityManager - Changing modify acls groups to: 
+INFO main org.apache.spark.SecurityManager - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(zafer); groups with view permissions: Set(); users  with modify permissions: Set(zafer); groups with modify permissions: Set()

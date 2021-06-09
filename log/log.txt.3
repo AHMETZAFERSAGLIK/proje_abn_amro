@@ -1,0 +1,72 @@
+INFO Thread-3 org.apache.spark.sql.execution.datasources.InMemoryFileIndex - It took 2 ms to list leaf files for 1 paths.
+INFO Thread-3 org.apache.spark.sql.execution.datasources.InMemoryFileIndex - It took 2 ms to list leaf files for 1 paths.
+INFO Thread-3 org.apache.spark.sql.execution.datasources.FileSourceStrategy - Pushed Filters: 
+INFO Thread-3 org.apache.spark.sql.execution.datasources.FileSourceStrategy - Post-Scan Filters: (length(trim(value#26, None)) > 0)
+INFO Thread-3 org.apache.spark.sql.execution.datasources.FileSourceStrategy - Output Data Schema: struct<value: string>
+INFO Thread-3 org.apache.spark.storage.memory.MemoryStore - Block broadcast_3 stored as values in memory (estimated size 303.4 KiB, free 365.3 MiB)
+INFO Thread-3 org.apache.spark.storage.memory.MemoryStore - Block broadcast_3_piece0 stored as bytes in memory (estimated size 27.6 KiB, free 365.3 MiB)
+INFO dispatcher-BlockManagerMaster org.apache.spark.storage.BlockManagerInfo - Added broadcast_3_piece0 in memory on 192.168.2.48:58106 (size: 27.6 KiB, free: 366.2 MiB)
+INFO Thread-3 org.apache.spark.SparkContext - Created broadcast 3 from csv at <unknown>:0
+INFO Thread-3 org.apache.spark.sql.execution.FileSourceScanExec - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+INFO Thread-3 org.apache.spark.SparkContext - Starting job: csv at <unknown>:0
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 1 (csv at <unknown>:0) with 1 output partitions
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 1 (csv at <unknown>:0)
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 1 (MapPartitionsRDD[13] at csv at <unknown>:0), which has no missing parents
+INFO dag-scheduler-event-loop org.apache.spark.storage.memory.MemoryStore - Block broadcast_4 stored as values in memory (estimated size 10.8 KiB, free 365.3 MiB)
+INFO dag-scheduler-event-loop org.apache.spark.storage.memory.MemoryStore - Block broadcast_4_piece0 stored as bytes in memory (estimated size 5.4 KiB, free 365.3 MiB)
+INFO dispatcher-BlockManagerMaster org.apache.spark.storage.BlockManagerInfo - Added broadcast_4_piece0 in memory on 192.168.2.48:58106 (size: 5.4 KiB, free: 366.2 MiB)
+INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 4 from broadcast at DAGScheduler.scala:1388
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[13] at csv at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 1.0 with 1 tasks resource profile 0
+INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 1.0 (TID 1) (192.168.2.48, executor driver, partition 0, PROCESS_LOCAL, 4886 bytes) taskResourceAssignments Map()
+INFO Executor task launch worker for task 0.0 in stage 1.0 (TID 1) org.apache.spark.executor.Executor - Running task 0.0 in stage 1.0 (TID 1)
+INFO Executor task launch worker for task 0.0 in stage 1.0 (TID 1) org.apache.spark.sql.execution.datasources.FileScanRDD - Reading File path: file:///C:/Users/zafer/Desktop/abn_amro/proje/dataset_two.csv, range: 0-64985, partition values: [empty row]
+INFO Executor task launch worker for task 0.0 in stage 1.0 (TID 1) org.apache.spark.executor.Executor - Finished task 0.0 in stage 1.0 (TID 1). 1496 bytes result sent to driver
+INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 1.0 (TID 1) in 22 ms on 192.168.2.48 (executor driver) (1/1)
+INFO task-result-getter-1 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 1 (csv at <unknown>:0) finished in 0,039 s
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Killing all running tasks in stage 1: Stage finished
+INFO Thread-3 org.apache.spark.scheduler.DAGScheduler - Job 1 finished: csv at <unknown>:0, took 0,042898 s
+INFO Thread-3 org.apache.spark.sql.execution.datasources.FileSourceStrategy - Pushed Filters: 
+INFO Thread-3 org.apache.spark.sql.execution.datasources.FileSourceStrategy - Post-Scan Filters: 
+INFO Thread-3 org.apache.spark.sql.execution.datasources.FileSourceStrategy - Output Data Schema: struct<value: string>
+INFO Thread-3 org.apache.spark.storage.memory.MemoryStore - Block broadcast_5 stored as values in memory (estimated size 303.4 KiB, free 365.0 MiB)
+INFO Thread-3 org.apache.spark.storage.memory.MemoryStore - Block broadcast_5_piece0 stored as bytes in memory (estimated size 27.6 KiB, free 365.0 MiB)
+INFO dispatcher-BlockManagerMaster org.apache.spark.storage.BlockManagerInfo - Added broadcast_5_piece0 in memory on 192.168.2.48:58106 (size: 27.6 KiB, free: 366.2 MiB)
+INFO Thread-3 org.apache.spark.SparkContext - Created broadcast 5 from csv at <unknown>:0
+INFO Thread-3 org.apache.spark.sql.execution.FileSourceScanExec - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+INFO Thread-3 org.apache.spark.sql.execution.datasources.FileSourceStrategy - Pushed Filters: 
+INFO Thread-3 org.apache.spark.sql.execution.datasources.FileSourceStrategy - Post-Scan Filters: 
+INFO Thread-3 org.apache.spark.sql.execution.datasources.FileSourceStrategy - Output Data Schema: struct<>
+INFO Thread-3 org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator - Code generated in 23.7628 ms
+INFO Thread-3 org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator - Code generated in 31.9886 ms
+INFO Thread-3 org.apache.spark.storage.memory.MemoryStore - Block broadcast_6 stored as values in memory (estimated size 303.2 KiB, free 364.7 MiB)
+INFO Thread-3 org.apache.spark.storage.memory.MemoryStore - Block broadcast_6_piece0 stored as bytes in memory (estimated size 27.5 KiB, free 364.7 MiB)
+INFO dispatcher-BlockManagerMaster org.apache.spark.storage.BlockManagerInfo - Added broadcast_6_piece0 in memory on 192.168.2.48:58106 (size: 27.5 KiB, free: 366.2 MiB)
+INFO Thread-3 org.apache.spark.SparkContext - Created broadcast 6 from count at <unknown>:0
+INFO Thread-3 org.apache.spark.sql.execution.FileSourceScanExec - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+INFO Thread-3 org.apache.spark.SparkContext - Starting job: count at <unknown>:0
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Registering RDD 23 (count at <unknown>:0) as input to shuffle 0
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 2 (count at <unknown>:0) with 1 output partitions
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 3 (count at <unknown>:0)
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List(ShuffleMapStage 2)
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List(ShuffleMapStage 2)
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ShuffleMapStage 2 (MapPartitionsRDD[23] at count at <unknown>:0), which has no missing parents
+INFO dag-scheduler-event-loop org.apache.spark.storage.memory.MemoryStore - Block broadcast_7 stored as values in memory (estimated size 15.2 KiB, free 364.6 MiB)
+INFO dag-scheduler-event-loop org.apache.spark.storage.memory.MemoryStore - Block broadcast_7_piece0 stored as bytes in memory (estimated size 7.8 KiB, free 364.6 MiB)
+INFO dispatcher-BlockManagerMaster org.apache.spark.storage.BlockManagerInfo - Added broadcast_7_piece0 in memory on 192.168.2.48:58106 (size: 7.8 KiB, free: 366.1 MiB)
+INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 7 from broadcast at DAGScheduler.scala:1388
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[23] at count at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 2.0 with 1 tasks resource profile 0
+INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 2.0 (TID 2) (192.168.2.48, executor driver, partition 0, PROCESS_LOCAL, 4875 bytes) taskResourceAssignments Map()
+INFO Executor task launch worker for task 0.0 in stage 2.0 (TID 2) org.apache.spark.executor.Executor - Running task 0.0 in stage 2.0 (TID 2)
+INFO Executor task launch worker for task 0.0 in stage 2.0 (TID 2) org.apache.spark.sql.execution.datasources.FileScanRDD - Reading File path: file:///C:/Users/zafer/Desktop/abn_amro/proje/dataset_one.csv, range: 0-52041, partition values: [empty row]
+INFO Executor task launch worker for task 0.0 in stage 2.0 (TID 2) org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator - Code generated in 11.0337 ms
+INFO Executor task launch worker for task 0.0 in stage 2.0 (TID 2) org.apache.spark.executor.Executor - Finished task 0.0 in stage 2.0 (TID 2). 1965 bytes result sent to driver
+INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 2.0 (TID 2) in 142 ms on 192.168.2.48 (executor driver) (1/1)
+INFO task-result-getter-2 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 2.0, whose tasks have all completed, from pool 
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ShuffleMapStage 2 (count at <unknown>:0) finished in 0,164 s
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - looking for newly runnable stages
