@@ -24,6 +24,20 @@ def read_csv(df_name, df2_name):
     return df, df_2
 
 
+def filter_by_country(df, cont_1, cont_2):
+    """Filtering DataFrame according to two countries given as param.
+
+    "OR" operation has been used.Function returns both countries results.
+
+    :param dataframe object df: PySpark Dataframe object.
+    :param str cont_1: First country for filtering.
+    :param str cont_2: Second country for filtering.
+    :return: Dataframe that includes result of both countries.
+    :rtype: PySpark Dataframe Object
+
+
+    """
+    return df.filter((df.country == cont_1) | (df.country == cont_2))
 
 
 def main():
@@ -33,6 +47,12 @@ def main():
     df2_name = sys.argv[4]
     log4jLogger = sc._jvm.org.apache.log4j
     log4jLogger.LogManager.getLogger(__name__)
+    df, df_2 = read_csv(df_name, df2_name)
+    df_fil = filter_by_country(df, cont_1, cont_2)
+    df_fil = df_fil.drop("first_name", "last_name", "country")
+    df_2 = df_2.drop("cc_n")
+    df_con = df_fil.join(df_2, ['id'])
+
 
 
 
