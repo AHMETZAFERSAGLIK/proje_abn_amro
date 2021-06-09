@@ -18,6 +18,7 @@ def test_read():
     assert df.count() == 1000
     assert df_2.count() == 1000
 
+
 def test_filter():
     """Test for Filtering dataframe.
 
@@ -31,3 +32,20 @@ def test_filter():
     exp_input_df = spark.createDataFrame(exp_data, ["country"])
     result_df = filter_by_country(input_df, "United Kingdom", "Netherlands")
     assert_df_equality(result_df, exp_input_df)
+
+
+def test_rename():
+    """Test for Renaming dataframe.
+
+    Checks the function of col_rename by comparing with test Dataframe.
+
+    """
+
+    df = spark.createDataFrame(
+        [("", "", "", "")], ["id", "email", "btc_a", "cc_t"])
+    df_con_rename = col_rename(COL_DICT, df)
+    assert df_con_rename.columns == [
+        "client_identifier",
+        "email",
+        "bitcoin_address",
+        "credit_card_type"]
