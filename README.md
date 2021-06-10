@@ -67,7 +67,7 @@ df.write.format('csv').option('header',True).mode('overwrite').option('sep',',')
 ## Submitting the Job
 The application takes 3 arguments first paramether for the country chosen to filter other two are the csv file names
 
-_**spark-submit challenge.py "Netherlands" "dataset_one.csv" "dataset_two.csv**_
+_**spark-submit challenge.py "Netherlands" "dataset_one.csv" "dataset_two.csv"**_
 
 ![spark-submit_ss_1.png](spark-submit_ss_1.png)
 ![spark-submit_ss_2.png](spark-submit_ss_2.png)
