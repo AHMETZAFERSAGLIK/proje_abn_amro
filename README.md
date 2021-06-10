@@ -41,7 +41,7 @@ log4j.rootLogger=INFO, ROOT,console
 # set the root logger class
 log4j.appender.ROOT=org.apache.log4j.RollingFileAppender
 # set the name/location of the log file to rotate
-log4j.appender.ROOT.File=\\C:\\Users\\zafer\\Desktop\\abn_amro\\proje\\log\\log.txt
+log4j.appender.ROOT.File=.\\log\\log.txt
 # set the max file size before a new file (and backups) are made
 log4j.appender.ROOT.MaxFileSize=10KB
 # set how many iterations of the log file to keep before deleting old logs
