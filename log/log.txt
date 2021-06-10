@@ -1,48 +1,56 @@
-INFO Executor task launch worker for task 2.0 in stage 6.0 (TID 8) org.apache.spark.executor.Executor - Finished task 2.0 in stage 6.0 (TID 8). 1839 bytes result sent to driver
-INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 6.0 (TID 8) in 2674 ms on 192.168.2.48 (executor driver) (4/4)
-INFO task-result-getter-1 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 6.0, whose tasks have all completed, from pool 
-INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 6 (collect at c:\users\zafer\appdata\local\programs\python\python39\lib\site-packages\chispa\dataframe_comparer.py:68) finished in 2,692 s
-INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
-INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Killing all running tasks in stage 6: Stage finished
-INFO Thread-3 org.apache.spark.scheduler.DAGScheduler - Job 4 finished: collect at c:\users\zafer\appdata\local\programs\python\python39\lib\site-packages\chispa\dataframe_comparer.py:68, took 2,693820 s
-INFO Thread-3 org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator - Code generated in 11.1045 ms
-INFO Thread-3 org.apache.spark.SparkContext - Starting job: collect at c:\users\zafer\appdata\local\programs\python\python39\lib\site-packages\chispa\dataframe_comparer.py:69
-INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 5 (collect at c:\users\zafer\appdata\local\programs\python\python39\lib\site-packages\chispa\dataframe_comparer.py:69) with 4 output partitions
-INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 7 (collect at c:\users\zafer\appdata\local\programs\python\python39\lib\site-packages\chispa\dataframe_comparer.py:69)
+INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 2.0 (TID 2) (192.168.2.48, executor driver, partition 0, PROCESS_LOCAL, 4886 bytes) taskResourceAssignments Map()
+INFO Executor task launch worker for task 0.0 in stage 2.0 (TID 2) org.apache.spark.executor.Executor - Running task 0.0 in stage 2.0 (TID 2)
+INFO Executor task launch worker for task 0.0 in stage 2.0 (TID 2) org.apache.spark.sql.execution.datasources.FileScanRDD - Reading File path: file:///C:/Users/zafer/Desktop/abn_amro/proje/dataset_one.csv, range: 0-52041, partition values: [empty row]
+INFO Executor task launch worker for task 0.0 in stage 2.0 (TID 2) org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator - Code generated in 18.0591 ms
+INFO Executor task launch worker for task 0.0 in stage 2.0 (TID 2) org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator - Code generated in 12.3307 ms
+INFO Executor task launch worker for task 0.0 in stage 2.0 (TID 2) org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator - Code generated in 11.1112 ms
+INFO Executor task launch worker for task 0.0 in stage 2.0 (TID 2) org.apache.spark.executor.Executor - Finished task 0.0 in stage 2.0 (TID 2). 3579 bytes result sent to driver
+INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 2.0 (TID 2) in 337 ms on 192.168.2.48 (executor driver) (1/1)
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 2 (toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:73) finished in 0,683 s
+INFO task-result-getter-2 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 2.0, whose tasks have all completed, from pool 
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Killing all running tasks in stage 2: Stage finished
+INFO broadcast-exchange-0 org.apache.spark.scheduler.DAGScheduler - Job 2 finished: toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:73, took 0,811734 s
+INFO broadcast-exchange-0 org.apache.spark.storage.memory.MemoryStore - Block broadcast_8 stored as values in memory (estimated size 4.0 MiB, free 360.6 MiB)
+INFO broadcast-exchange-0 org.apache.spark.storage.memory.MemoryStore - Block broadcast_8_piece0 stored as bytes in memory (estimated size 2.7 KiB, free 360.6 MiB)
+INFO dispatcher-BlockManagerMaster org.apache.spark.storage.BlockManagerInfo - Added broadcast_8_piece0 in memory on 192.168.2.48:61051 (size: 2.7 KiB, free: 366.1 MiB)
+INFO broadcast-exchange-0 org.apache.spark.SparkContext - Created broadcast 8 from toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:73
+INFO Thread-4 org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator - Code generated in 101.9394 ms
+INFO Thread-4 org.apache.spark.storage.memory.MemoryStore - Block broadcast_9 stored as values in memory (estimated size 303.1 KiB, free 360.3 MiB)
+INFO Thread-4 org.apache.spark.storage.memory.MemoryStore - Block broadcast_9_piece0 stored as bytes in memory (estimated size 27.4 KiB, free 360.3 MiB)
+INFO dispatcher-BlockManagerMaster org.apache.spark.storage.BlockManagerInfo - Added broadcast_9_piece0 in memory on 192.168.2.48:61051 (size: 27.4 KiB, free: 366.1 MiB)
+INFO Thread-4 org.apache.spark.SparkContext - Created broadcast 9 from toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:73
+INFO Thread-4 org.apache.spark.sql.execution.FileSourceScanExec - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+INFO Thread-4 org.apache.spark.SparkContext - Starting job: toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:73
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 3 (toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:73) with 1 output partitions
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 3 (toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:73)
 INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
 INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
-INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 7 (MapPartitionsRDD[47] at collect at c:\users\zafer\appdata\local\programs\python\python39\lib\site-packages\chispa\dataframe_comparer.py:69), which has no missing parents
-INFO dag-scheduler-event-loop org.apache.spark.storage.memory.MemoryStore - Block broadcast_13 stored as values in memory (estimated size 10.9 KiB, free 365.3 MiB)
-INFO dag-scheduler-event-loop org.apache.spark.storage.memory.MemoryStore - Block broadcast_13_piece0 stored as bytes in memory (estimated size 5.8 KiB, free 365.2 MiB)
-INFO dispatcher-BlockManagerMaster org.apache.spark.storage.BlockManagerInfo - Added broadcast_13_piece0 in memory on 192.168.2.48:49745 (size: 5.8 KiB, free: 366.2 MiB)
-INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 13 from broadcast at DAGScheduler.scala:1388
-INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 4 missing tasks from ResultStage 7 (MapPartitionsRDD[47] at collect at c:\users\zafer\appdata\local\programs\python\python39\lib\site-packages\chispa\dataframe_comparer.py:69) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
-INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 7.0 with 4 tasks resource profile 0
-INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 7.0 (TID 10) (192.168.2.48, executor driver, partition 0, PROCESS_LOCAL, 4461 bytes) taskResourceAssignments Map()
-INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 7.0 (TID 11) (192.168.2.48, executor driver, partition 1, PROCESS_LOCAL, 4461 bytes) taskResourceAssignments Map()
-INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 2.0 in stage 7.0 (TID 12) (192.168.2.48, executor driver, partition 2, PROCESS_LOCAL, 4461 bytes) taskResourceAssignments Map()
-INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 3.0 in stage 7.0 (TID 13) (192.168.2.48, executor driver, partition 3, PROCESS_LOCAL, 4502 bytes) taskResourceAssignments Map()
-INFO Executor task launch worker for task 0.0 in stage 7.0 (TID 10) org.apache.spark.executor.Executor - Running task 0.0 in stage 7.0 (TID 10)
-INFO Executor task launch worker for task 1.0 in stage 7.0 (TID 11) org.apache.spark.executor.Executor - Running task 1.0 in stage 7.0 (TID 11)
-INFO Executor task launch worker for task 2.0 in stage 7.0 (TID 12) org.apache.spark.executor.Executor - Running task 2.0 in stage 7.0 (TID 12)
-INFO Executor task launch worker for task 3.0 in stage 7.0 (TID 13) org.apache.spark.executor.Executor - Running task 3.0 in stage 7.0 (TID 13)
-INFO Executor task launch worker for task 0.0 in stage 7.0 (TID 10) org.apache.spark.api.python.PythonRunner - Times: total = 700, boot = 700, init = 0, finish = 0
-INFO Executor task launch worker for task 3.0 in stage 7.0 (TID 13) org.apache.spark.api.python.PythonRunner - Times: total = 1411, boot = 1411, init = 0, finish = 0
-INFO Executor task launch worker for task 2.0 in stage 7.0 (TID 12) org.apache.spark.api.python.PythonRunner - Times: total = 2007, boot = 2007, init = 0, finish = 0
-INFO Executor task launch worker for task 2.0 in stage 7.0 (TID 12) org.apache.spark.executor.Executor - Finished task 2.0 in stage 7.0 (TID 12). 1734 bytes result sent to driver
-INFO Executor task launch worker for task 0.0 in stage 7.0 (TID 10) org.apache.spark.executor.Executor - Finished task 0.0 in stage 7.0 (TID 10). 1734 bytes result sent to driver
-INFO Executor task launch worker for task 3.0 in stage 7.0 (TID 13) org.apache.spark.executor.Executor - Finished task 3.0 in stage 7.0 (TID 13). 1811 bytes result sent to driver
-INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 7.0 (TID 12) in 2614 ms on 192.168.2.48 (executor driver) (1/4)
-INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 7.0 (TID 10) in 2615 ms on 192.168.2.48 (executor driver) (2/4)
-INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 3.0 in stage 7.0 (TID 13) in 2613 ms on 192.168.2.48 (executor driver) (3/4)
-INFO Executor task launch worker for task 1.0 in stage 7.0 (TID 11) org.apache.spark.api.python.PythonRunner - Times: total = 2588, boot = 2588, init = 0, finish = 0
-INFO Executor task launch worker for task 1.0 in stage 7.0 (TID 11) org.apache.spark.executor.Executor - Finished task 1.0 in stage 7.0 (TID 11). 1777 bytes result sent to driver
-INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 7.0 (TID 11) in 2630 ms on 192.168.2.48 (executor driver) (4/4)
-INFO task-result-getter-1 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 7.0, whose tasks have all completed, from pool 
-INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 7 (collect at c:\users\zafer\appdata\local\programs\python\python39\lib\site-packages\chispa\dataframe_comparer.py:69) finished in 2,653 s
-INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
-INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Killing all running tasks in stage 7: Stage finished
-INFO Thread-3 org.apache.spark.scheduler.DAGScheduler - Job 5 finished: collect at c:\users\zafer\appdata\local\programs\python\python39\lib\site-packages\chispa\dataframe_comparer.py:69, took 2,658860 s
-INFO shutdown-hook-0 org.apache.spark.SparkContext - Invoking stop() from shutdown hook
-INFO shutdown-hook-0 org.apache.spark.ui.SparkUI - Stopped Spark web UI at http://192.168.2.48:4040
-INFO dispatcher-event-loop-3 org.apache.spark.MapOutputTrackerMasterEndpoint - MapOutputTrackerMasterEndpoint stopped!
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 3 (MapPartitionsRDD[27] at toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:73), which has no missing parents
+INFO dag-scheduler-event-loop org.apache.spark.storage.memory.MemoryStore - Block broadcast_10 stored as values in memory (estimated size 15.0 KiB, free 360.3 MiB)
+INFO dag-scheduler-event-loop org.apache.spark.storage.memory.MemoryStore - Block broadcast_10_piece0 stored as bytes in memory (estimated size 7.2 KiB, free 360.3 MiB)
+INFO dispatcher-BlockManagerMaster org.apache.spark.storage.BlockManagerInfo - Added broadcast_10_piece0 in memory on 192.168.2.48:61051 (size: 7.2 KiB, free: 366.1 MiB)
+INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 10 from broadcast at DAGScheduler.scala:1388
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[27] at toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:73) (first 15 tasks are for partitions Vector(0))
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 3.0 with 1 tasks resource profile 0
+INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 3.0 (TID 3) (192.168.2.48, executor driver, partition 0, PROCESS_LOCAL, 4886 bytes) taskResourceAssignments Map()
+INFO Executor task launch worker for task 0.0 in stage 3.0 (TID 3) org.apache.spark.executor.Executor - Running task 0.0 in stage 3.0 (TID 3)
+INFO Executor task launch worker for task 0.0 in stage 3.0 (TID 3) org.apache.spark.sql.execution.datasources.FileScanRDD - Reading File path: file:///C:/Users/zafer/Desktop/abn_amro/proje/dataset_two.csv, range: 0-64985, partition values: [empty row]
+INFO Executor task launch worker for task 0.0 in stage 3.0 (TID 3) org.apache.spark.executor.Executor - Finished task 0.0 in stage 3.0 (TID 3). 6676 bytes result sent to driver
+INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 3.0 (TID 3) in 64 ms on 192.168.2.48 (executor driver) (1/1)
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 3 (toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:73) finished in 0,090 s
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+INFO task-result-getter-3 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 3.0, whose tasks have all completed, from pool 
+INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Killing all running tasks in stage 3: Stage finished
+INFO Thread-4 org.apache.spark.scheduler.DAGScheduler - Job 3 finished: toPandas at C:\Users\zafer\Desktop\abn_amro\proje\challenge.py:73, took 0,094993 s
+INFO main org.apache.spark.ui.SparkUI - Stopped Spark web UI at http://192.168.2.48:4040
+INFO dispatcher-event-loop-0 org.apache.spark.MapOutputTrackerMasterEndpoint - MapOutputTrackerMasterEndpoint stopped!
+INFO main org.apache.spark.storage.memory.MemoryStore - MemoryStore cleared
+INFO main org.apache.spark.storage.BlockManager - BlockManager stopped
+INFO main org.apache.spark.storage.BlockManagerMaster - BlockManagerMaster stopped
+INFO dispatcher-event-loop-0 org.apache.spark.scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint - OutputCommitCoordinator stopped!
+INFO main org.apache.spark.SparkContext - Successfully stopped SparkContext
+INFO shutdown-hook-0 org.apache.spark.util.ShutdownHookManager - Shutdown hook called
+INFO shutdown-hook-0 org.apache.spark.util.ShutdownHookManager - Deleting directory C:\Users\zafer\AppData\Local\Temp\spark-17c35a66-0a39-4839-ae41-dc5a0ab75d86
+INFO shutdown-hook-0 org.apache.spark.util.ShutdownHookManager - Deleting directory C:\Users\zafer\AppData\Local\Temp\spark-afe52faf-e1d5-4e85-b359-acf1a4067fb6
+INFO shutdown-hook-0 org.apache.spark.util.ShutdownHookManager - Deleting directory C:\Users\zafer\AppData\Local\Temp\spark-afe52faf-e1d5-4e85-b359-acf1a4067fb6\pyspark-acb3161e-d42d-42e0-b7b6-d2c55dc52b18

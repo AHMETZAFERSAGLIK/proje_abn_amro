@@ -12,7 +12,7 @@ COL_DICT = {
 
 
 def filter_by_country(df, cont_1):
-    """Filtering DataFrame according to  country given as param.
+    """Filtering DataFrame according to country given as param.
 
 
     :param dataframe object df: PySpark Dataframe object.
@@ -66,7 +66,6 @@ def main():
     log4jLogger.LogManager.getLogger(__name__)
     df, df_2 = read_csv(df_name, df2_name)
     df_fil = filter_by_country(df, cont_1)
-    df_fil.show()
     df_fil = df_fil.drop("first_name", "last_name", "country")
     df_2 = df_2.drop("cc_n")
     df_con = df_fil.join(df_2, ['id'])
