@@ -2,7 +2,7 @@
 ```
 Java Environment (JDK or JRE)
 Python (3.7 or higher)
-Spark-(3.1.2-bin-hadoop3.2O or other versions)
+Spark-(3.1.2-bin-hadoop3.2O or other versions-http://spark.apache.org/downloads.html) 
 For Windows you should initialize the System Variables and Paths of 
 (SPARK_HOME,HADOOP_HOME and JAVA_HOME)
 ```
@@ -14,10 +14,7 @@ For Windows you should initialize the System Variables and Paths of
 -Just run the following command: _**"pip install -r requirements.txt"**_
 
 ## Which Libraries has been used
-from pyspark import SparkContext
-from pyspark.sql import SparkSession
 
-_And_
 
 **pyspark**
 
@@ -122,9 +119,12 @@ log4j.appender.ROOT.MaxBackupIndex=5
 ## reStructuredText (reST) 
 -All functions has docstring comments for informations.
 
-##Travis Pipeline
+## Travis Pipeline
 -When you create a new push from master Node it automaticly run the script
 named _".travis.yml"_
+
+![image](https://user-images.githubusercontent.com/69164622/121516537-9be7ef00-c9ee-11eb-8ea0-9a02b98bb950.png)
+
 
 ## Commits 
 -I have push different tasks and scripst from different brances
