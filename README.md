@@ -14,10 +14,7 @@ For Windows you should initialize the System Variables and Paths of
 -Just run the following command: _**"pip install -r requirements.txt"**_
 
 ## Which Libraries has been used
-from pyspark import SparkContext
-from pyspark.sql import SparkSession
 
-_And_
 
 **pyspark**
 
