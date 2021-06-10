@@ -1,4 +1,4 @@
-##Requirements For PySpark
+## Requirements For PySpark
 ```
 Java Environment (JDK or JRE)
 Python (3.7 or higher)
@@ -6,8 +6,8 @@ Spark-(3.1.2-bin-hadoop3.2O or other versions)
 For Windows you should initialize the System Variables and Paths of 
 (SPARK_HOME,HADOOP_HOME and JAVA_HOME)
 ```
-##Installing Requirements 
-####(_Requirement txt file exist_)
+## Installing Requirements 
+#### (_Requirement txt file exist_)
 
 -All the Libraries except Pyspark has written to file named _requirements.txt_
 
@@ -34,19 +34,20 @@ df.write.format('csv').option('header',True).mode('overwrite').option('sep',',')
 **autopep8** (_For creating a better code view_)
 
 
-##How app works?
 
-1.Reading Csv's 
+## How app works?
 
-2.Filtering the country given as param(You can give any country,Just also change the name in the test for it)
+1. Reading Csv's 
 
-3.Removing personal identifiable information from the first dataset,excluding emails
+2. Filtering the country given as param(You can give any country,Just also change the name in the test for it)
 
-4.Remove credit card number from the second dataset
+3. Removing personal identifiable information from the first dataset,excluding emails
 
-5.Data has joined using the id field
+4. Remove credit card number from the second dataset
 
-6.Renaming the columns for the easier readability to the business users as follows:
+5. Data has joined using the id field
+
+6. Renaming the columns for the easier readability to the business users as follows:
 
 |Old name|New name         |
 |--------|-----------------|
@@ -54,24 +55,24 @@ df.write.format('csv').option('header',True).mode('overwrite').option('sep',',')
 |btc_a   |bitcoin_address  |
 |cc_t    |credit_card_type |
 
-7.Saving the output in _client_data_ directory in the root directory of the project.
+7. Saving the output in _client_data_ directory in the root directory of the project.
 
-8.There are three _**generic function**_ for works any type of data.
+8. There are three _**generic function**_ for works any type of data.
     
     * Read_csv
     * Filtering country choosen by user
     * Renaming colums 
     (you can chance and specify any column by changing names in the dictionary
 
-##Submitting the Job
+## Submitting the Job
 The application takes 3 arguments first paramether for the country chosen to filter other two are the csv file names
 
-_**spark-submit challenge.py "Netherlands" "dataset_one.csv" "dataset_two.csv**_
+_**spark-submit challenge.py "Netherlands" "dataset_one.csv" "dataset_two.csv"**_
 
 ![spark-submit_ss_1.png](spark-submit_ss_1.png)
 ![spark-submit_ss_2.png](spark-submit_ss_2.png)
 
-##Testing
+## Testing
 -For all 3 create generic functions I used Testing which also includes chispa functions
 
 -I have created another script for tests (**challenge_test.py**)
@@ -80,7 +81,7 @@ _**spark-submit challenge.py "Netherlands" "dataset_one.csv" "dataset_two.csv**_
 
 ![py_test_ss.png](pytest_ss.png)
 
-##Log and Log Rotating
+## Log and Log Rotating
 -I have add following code to app for creating writing log into file.
 
 -I used (log4j) for logging in Pyspark
@@ -88,7 +89,7 @@ _**spark-submit challenge.py "Netherlands" "dataset_one.csv" "dataset_two.csv**_
 log4jLogger = sc._jvm.org.apache.log4j
 log4jLogger.LogManager.getLogger(__name__)
 ```
-###Log Rotating
+### Log Rotating
 -I have initialise the script in \spark\conf\log4j.properties
 -Added following code for Rotating and getting output "\proje\log\ 
 
@@ -118,16 +119,16 @@ log4j.appender.ROOT.MaxFileSize=10KB
 # set how many iterations of the log file to keep before deleting old logs
 log4j.appender.ROOT.MaxBackupIndex=5
 ```
-##reStructuredText (reST) 
+## reStructuredText (reST) 
 -All functions has docstring comments for informations.
 
 ##Travis Pipeline
 -When you create a new push from master Node it automaticly run the script
 named _".travis.yml"_
 
-##Commits 
+## Commits 
 -I have push different tasks and scripst from different brances
 
-##Important 
+## Important 
 
--I have finalized every task and every bonus task
+-I have finalized every task and including every bonus task
