@@ -126,6 +126,9 @@ log4j.appender.ROOT.MaxBackupIndex=5
 -When you create a new push from master Node it automaticly run the script
 named _".travis.yml"_
 
+![image](https://user-images.githubusercontent.com/69164622/121516537-9be7ef00-c9ee-11eb-8ea0-9a02b98bb950.png)
+
+
 ## Commits 
 -I have push different tasks and scripst from different brances
 
