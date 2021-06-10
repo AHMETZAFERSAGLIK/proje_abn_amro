@@ -2,7 +2,7 @@
 ```
 Java Environment (JDK or JRE)
 Python (3.7 or higher)
-Spark-(3.1.2-bin-hadoop3.2O or other versions)
+Spark-(3.1.2-bin-hadoop3.2O or other versions-http://spark.apache.org/downloads.html) 
 For Windows you should initialize the System Variables and Paths of 
 (SPARK_HOME,HADOOP_HOME and JAVA_HOME)
 ```
