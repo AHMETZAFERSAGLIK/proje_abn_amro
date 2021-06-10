@@ -23,14 +23,16 @@ def test_filter():
     """Test for Filtering dataframe.
 
     Checks the function of filter_by_country by comparing with test Dataframe.
+    If you want to filter with other countries just chance the name of country in
+    "exp_data" and "result_df".
 
     """
 
     data = [("Netherlands",), ("United Kingdom",), ("France",)]
     input_df = spark.createDataFrame(data, ["country"])
-    exp_data = [("Netherlands",), ("United Kingdom",)]
+    exp_data = [("Netherlands",)]
     exp_input_df = spark.createDataFrame(exp_data, ["country"])
-    result_df = filter_by_country(input_df, "United Kingdom", "Netherlands")
+    result_df = filter_by_country(input_df, "Netherlands")
     assert_df_equality(result_df, exp_input_df)
 
 
