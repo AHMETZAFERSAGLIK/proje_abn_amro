@@ -66,8 +66,8 @@ The application takes 3 arguments first paramether for the country chosen to fil
 
 _**spark-submit challenge.py "Netherlands" "dataset_one.csv" "dataset_two.csv"**_
 
-![spark-submit_ss_1.png](spark-submit_ss_1.png)
-![spark-submit_ss_2.png](spark-submit_ss_2.png)
+![spark-submit_ss_1.png](screen_captures/spark-submit_ss_1.png)
+![spark-submit_ss_2.png](screen_captures/spark-submit_ss_2.png)
 
 ## Testing
 -For all 3 create generic functions I used Testing which also includes chispa functions
@@ -76,7 +76,7 @@ _**spark-submit challenge.py "Netherlands" "dataset_one.csv" "dataset_two.csv"**
 
 -If you just type _**"pytest"**_ from the project root it will run all test functions.
 
-![py_test_ss.png](pytest_ss.png)
+![py_test_ss.png](screen_captures/pytest_ss.png)
 
 ## Log and Log Rotating
 -I have add following code to app for creating writing log into file.
@@ -128,6 +128,10 @@ named _".travis.yml"_
 
 ## Commits 
 -I have push different tasks and scripst from different brances
+
+## Setup.py
+
+Setup.py file also added. You can use it as a source distrubition file.
 
 ## Important 
 
