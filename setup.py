@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='proje_abn_amro',
     version='0.0.1',
-    packages=[''],
+    packages=['proje_abn_amro'],
     url='https://github.com/AHMETZAFERSAGLIK/proje_abn_amro',
     license='',
     author='zafer',
