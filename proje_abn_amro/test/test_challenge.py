@@ -1,4 +1,6 @@
 from pyspark.sql import SparkSession
+import sys
+sys.path.append('C:/Users/zafer/Desktop/abn_amro/proje_abn_amro/proje_abn_amro')
 from challenge import read_csv, filter_by_country, COL_DICT, col_rename
 from chispa.dataframe_comparer import *
 spark = SparkSession.builder.getOrCreate()
@@ -30,9 +32,9 @@ def test_filter():
 
     data = [("Netherlands",), ("United Kingdom",), ("France",)]
     input_df = spark.createDataFrame(data, ["country"])
-    exp_data = [("Netherlands",)]
+    exp_data = [("Netherlands",), ("United Kingdom",)]
     exp_input_df = spark.createDataFrame(exp_data, ["country"])
-    result_df = filter_by_country(input_df, "Netherlands")
+    result_df = filter_by_country(input_df, ["Netherlands", "United Kingdom"])
     assert_df_equality(result_df, exp_input_df)
 
 
