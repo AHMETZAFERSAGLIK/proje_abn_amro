@@ -1,6 +1,6 @@
 from pyspark.sql import SparkSession
 import sys
-sys.path.append('C:/Users/zafer/Desktop/abn_amro/proje_abn_amro/proje_abn_amro')
+sys.path.append('./proje_abn_amro')
 from challenge import read_csv, filter_by_country, COL_DICT, col_rename
 from chispa.dataframe_comparer import *
 spark = SparkSession.builder.getOrCreate()
