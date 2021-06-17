@@ -37,8 +37,8 @@ def read_csv(df_name, df2_name):
 
     """
 
-    df = spark.read.csv(f"C:/Users/zafer/Desktop/abn_amro/proje_abn_amro/data_sets/{df_name}", header=True)
-    df_2 = spark.read.csv(f"C:/Users/zafer/Desktop/abn_amro/proje_abn_amro/data_sets/{df2_name}", header=True)
+    df = spark.read.csv(f"./data_sets/{df_name}", header=True)
+    df_2 = spark.read.csv(f"./data_sets/{df2_name}", header=True)
 
     return df, df_2
 
