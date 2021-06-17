@@ -76,7 +76,7 @@ def main():
     df_2 = df_2.drop("cc_n")
     df_con = df_fil.join(df_2, ['id'])
     df_con_rename = col_rename(COL_DICT, df_con)
-    df_con_rename.toPandas().to_csv('C:/Users/zafer/Desktop/abn_amro/proje_abn_amro/client_data/mycsv.csv')
+    df_con_rename.toPandas().to_csv('./client_data/mycsv.csv')
 
 
 if __name__ == '__main__':
